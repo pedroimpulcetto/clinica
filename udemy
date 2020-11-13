@@ -4,30 +4,36 @@
 - Preparação do ambiente de desenvolvimento
     - Preparação do ambiente Windowns
     - Preparação do ambiente Linux
-    - Instalando os requisitos mínimos e criando o projeto
-    - Instalando o Django Rest Framework e fazendo as primeiras configurações
-- Desenvolvendo uma API de cadastro de clientes para uma clínica
-    - Criando e modelando a app pontos turísticos
-    - Criando e modelando a app Atrações
-    - Criando e modelando a app de comentários e avaliações
-    - Criando e modelando a app de Localização
+- Desenvolvendo a primeira API para entender a estruturo do Django Rest Framework 
+    - Configurações iniciais e criando o projeto BityLibrary
+    - Conhecendo e configurando o settings.py
+    - Criando o Model
+    - Criando o Serializer
+    - Criando a ViewSet
+    - Criando a URL
+    - Testando a primeira API
+- Desenvolvendo uma API de cadastro e gerenciamento de pacientes e seus atendimentos para uma clínica
+    - Configurações iniciais e criando o projeto Clinica
+    - Configurando o settings.py
+    - Criando e configurando a app Pacientes
+    - Criando estrutura para API-Pacientes
+    - Criando a URL-Pacientes
+    - Criando e configurando a app Agendamentos
+    - Criando estrutura para API-Agendamentos
+    - Criando a URL-Agendamentos
+    - Criando e configurando a app Históricos
+    - Criando estrutura para API-Históricos
+    - Criando a URL-Históricos
     - Primeiros passos da API
     - Entendendo o CRUD do ModelViewSet
-    - Consumindo a API com Postman
-    - Criando o Endpoint de Atrações
-    - Criando o Endpoint de Endereços
-    - Criando o Endpoint de Comentários
-    - Criando o Endpoint de Avaliações
+    - Consumindo a API com Insomnia
 - Desenvolvendo recursos avançados da API
-    - Implementando get_queryset em Pontos Turísticos
-    - Sobrescrevendo a action de GET
-    - Sobrescrevendo a action de POST
-    - Sobrescrevendo a action de DELETE
-    - Sobrescrevendo a action de update, partial_update e retrieve
-    - Implementando suas próprias actions personalizadas
+    - Entendendo as actions personalizadas
+    - Implementando detalhes nos Agendamentos
+    - Implementando detalhes nos Pacientes
 - Implementando imagens 
-    - Implementando imagens no Histórico
-    - Implementando imagens no clientes
+    - Implementando imagens em Pacientes
+    - Implementando lista de imagens em Histórico
 - Colocando a API no ar com Heroku
     - Deploy no Heroku, introdução
     - Preparação do projeto parte 1

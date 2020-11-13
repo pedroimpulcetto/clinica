@@ -11,15 +11,10 @@ class PacientesViewSet(viewsets.ModelViewSet):
     queryset = Pacientes.objects.all()
     serializer_class = PacientesSerializer
 
-    @action(detail=False, methods=['get'], url_path='detalhes', url_name='detalhes')
-    def detalhes(self, request, *args, **kwargs):
-        queryset = Pacientes.objects.all()
+    @action(detail=True, methods=['get'])
+    def detalhes(self, request, pk=None, *args, **kwargs):
+        queryset = Pacientes.objects.filter(pk=pk)
         self.serializer_class = PacientesDetalhesSerializer
         serializer = self.get_serializer(queryset, many=True)
 
         return Response(serializer.data)
-
-class PacientesDetalhesViewSet(viewsets.ModelViewSet):
-    queryset = Agendamentos.objects.all()
-    serializer_class = PacientesDetalhesSerializer
-

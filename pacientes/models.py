@@ -2,6 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+def imagem_paciente(instance, filename):
+    return '/'.join(['imagens', f'{instance.nome}-{instance.id_paciente}', filename])
+
+
 class Pacientes(models.Model):
     id_paciente = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100, blank=True, null=True)
@@ -22,6 +26,7 @@ class Pacientes(models.Model):
     cpf = models.CharField(
         max_length=100, blank=True, null=True)
     sexo = models.CharField(max_length=50, blank=False)
+    avatar = models.ImageField(upload_to=imagem_paciente, blank=True, null=True)
 
     class Meta:
         managed = True
