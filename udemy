@@ -1,0 +1,54 @@
+- Introdução
+    - Introdução
+    - Entendendo os conceitos fundamentais
+- Preparação do ambiente de desenvolvimento
+    - Preparação do ambiente Windowns
+    - Preparação do ambiente Linux
+    - Instalando os requisitos mínimos e criando o projeto
+    - Instalando o Django Rest Framework e fazendo as primeiras configurações
+- Desenvolvendo uma API de cadastro de clientes para uma clínica
+    - Criando e modelando a app pontos turísticos
+    - Criando e modelando a app Atrações
+    - Criando e modelando a app de comentários e avaliações
+    - Criando e modelando a app de Localização
+    - Primeiros passos da API
+    - Entendendo o CRUD do ModelViewSet
+    - Consumindo a API com Postman
+    - Criando o Endpoint de Atrações
+    - Criando o Endpoint de Endereços
+    - Criando o Endpoint de Comentários
+    - Criando o Endpoint de Avaliações
+- Desenvolvendo recursos avançados da API
+    - Implementando get_queryset em Pontos Turísticos
+    - Sobrescrevendo a action de GET
+    - Sobrescrevendo a action de POST
+    - Sobrescrevendo a action de DELETE
+    - Sobrescrevendo a action de update, partial_update e retrieve
+    - Implementando suas próprias actions personalizadas
+- Implementando imagens 
+    - Implementando imagens no Histórico
+    - Implementando imagens no clientes
+- Colocando a API no ar com Heroku
+    - Deploy no Heroku, introdução
+    - Preparação do projeto parte 1
+    - Preparação do projeto parte 2
+    - Deploy da aplicacao pela primeira vez
+
+===============================================
+Inicio projeto
+
+# Create a virtual environment to isolate our package dependencies locally
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+
+# Install Django and Django REST framework into the virtual environment
+pip install django
+pip install djangorestframework
+
+# Set up a new project with a single application
+django-admin startproject tutorial .  # Note the trailing '.' character
+cd tutorial
+django-admin startapp quickstart
+
+# criar as migrations padroes do django
+python manage.py migrate
